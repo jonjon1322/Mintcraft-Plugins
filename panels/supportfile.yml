@@ -1,0 +1,45 @@
+panels:
+  MainPanel:
+    perm: default
+    rows: 1
+    title: '&4Fate SMP Help'
+    empty: BLACK_STAINED_GLASS_PANE
+    item:
+      '0':
+        material: Grass_block
+        stack: 1
+        name: '&4Survival'
+        commands:
+        - world= spawn
+      '1':
+        material: emerald
+        stack: 1
+        name: '&4Shop'
+      '2':
+        material: golden_apple
+        stack: 1
+        name: '&4Referral A Friend'
+      '3':
+        material: diamond
+        stack: 1
+        name: '&4Bidding'
+      '4':
+        material: ender_eye
+        stack: 1
+        name: '&4Graves'
+      '5':
+        material: emerald_block
+        stack: 1 
+        name: '&4Auction House'
+      '6':
+        material: iron_pickaxe
+        stack: 1 
+        name: '&4Vain Miner'
+      '7':
+        material: gold_ingot
+        stack: 1 
+        name: '&4Coming Soon'
+      '8':
+        material: bedrock
+        stack: 1 
+        name: '&4Other'

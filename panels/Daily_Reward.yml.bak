@@ -1,0 +1,34 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Template File
+# |                            By RockyHawk v1.1
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+panels:
+  Daily:
+    perm: default
+    rows: 1
+    title: '&8Daily Rewards'
+    commands:
+    - daily
+    empty: GLASS_PANE
+    outside-commands:
+    - 'money take %cp-player-name% 100'
+    - 'bal'
+    - 'msg= you have paid $100 to the server'
+    item:
+      '4':
+        material: EMERALD
+        name: "&6Claim your reward"
+        lore:
+        - 'You can claim this again in 12 hours'
+        commands:
+        - console= lp user %cp-player-name% parent addtemp daily 12h
+        - console= case givekey %cp-player-name% daily 1
+        - refresh
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: daily
+          material: LIME_WOOL
+          name: "&4You already claimed this"
+          lore:
+          - '&5Try again in: %luckperms_group_expiry_time_daily%'

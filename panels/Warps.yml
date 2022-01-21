@@ -1,0 +1,93 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Template File
+# |                            By RockyHawk v1.1
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+#panels:
+#  template:
+#    perm: admin
+#    rows: 4
+#    title: '&8Template Panel'
+#    empty: GLASS_PANE
+#    item:
+#      '12':
+#        material: COBBLESTONE
+#        stack: 1
+#        name: '&fClick Me!'
+#        commands:
+#        - msg= You clicked the item!
+#        - cpc
+####################################################################
+
+panels:
+  Warps:
+    rows: 4
+    title: '&9Warps'
+    empty: BLUE_STAINED_GLASS_PANE
+    item:
+      '12':
+        material: RED_WOOL
+        stack: 1
+        name: '&6SMP'
+        commands:
+        - console= mvtp %cp-player-name% world
+      '14':
+        material: WHITE_WOOL
+        stack: 1
+        name: '&7SPAWN'
+        commands:
+        - mvtp spawn
+      '31':
+        material: BARRIER
+        stack: 1
+        name: '&6Close'
+        commands:
+        - cpc
+      '28':
+        material: BOOK
+        stack: 1
+        name: '&6Info'
+        lore:
+        - '&6 more warps will be'
+        - '&6   avalable in the'
+        - '&6        future'
+      '35':
+        material: BLUE_STAINED_GLASS_PANE
+        name: "&5Missing Permission"
+        lore:
+        - '&cYou cant warp to CharonsEyes'
+        - '&cYour Missing the'
+        - '&cPermission'
+        - '&cmultiverse.access.charonseyes'
+        commands:
+        - msg %cp-player-name% Missing Permission 
+        has0:
+          value0: 'Jonathan_Nathan OR CharonsEyes'
+          compare0: '%cp-player-name%'
+          material: LIME_WOOL
+          name: "&5Your username Matches"
+          has0:
+            value0: '%cp-player-name% HASPERM'
+            compare0: worldedit.wand
+            material: GREEN_WOOL
+            name: "&5Warp"
+            commands:
+            - mvtp charonseyes
+            lore:
+            - '&2You can warp'
+            - '&6Your user name matches'
+            - '&6Players Jonathan_Nathan'
+            - '&6Or CharonsEyes'
+        has1:
+          value0: '%cp-player-name% HASPERM'
+          compare0: minecraft.command.stop
+          material: RED_WOOL
+          name: "&5Missing Permission"
+          lore:
+          - '&cWell this is awkward'
+          - '&cyou can warp but your'
+          - '&cMissing the permission'
+          - '&cmultiverse.access.charonseyes'
+          - '&6but you do have a permission to warp there'
+          commands:
+          - mvtp charonseyes

@@ -1,0 +1,48 @@
+panels:
+  panel-1:
+    perm: default
+    rows: HOPPER
+    title: 'Server Selector'
+    panelType:
+    - static
+    sound-on-open: EXPERIENCE_ORB_PICKUP
+    empty: BLACK_STAINED_GLASS_PANE
+    disabled-worlds:
+    - world_nether
+    - world_the_end
+    open-with-item:
+      material: IRON_INGOT
+      name: 'Server selector'
+      lore: 
+      - 'Click me to select a server'
+      stationary: 0
+      commands:
+      - open= panel-1
+    item:
+      '0': 
+        material: NETHERITE_SWORD
+        stack: 1
+        name: 'Survival'
+        lore:
+        - 'Click me to go to survival'
+        commands:
+        - server= survival
+        - cpc
+      '2':
+        material: GRASS_BLOCK
+        stack: 1
+        name: 'Skyblock'
+        lore: 
+        - 'Click me to go to skyblock (WIP)'
+        commands:
+        - msg= &cSorry to bother, but skyblock has not been implemented yet, check back later
+        - cpc
+      '6':
+        material: CHEST
+        stack: 1
+        name: 'Creative'
+        lore: 
+        - 'Click me to go to creative (WIP)'
+        commands:
+        - msg= &cSorry to bother, but creative has not been implemented yet, check back later
+        - cpc

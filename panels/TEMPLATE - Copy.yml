@@ -1,0 +1,52 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Template File
+# |                            By RockyHawk v1.1
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+#panels:
+#  template:
+#    perm: admin
+#    rows: 4
+#    title: '&8Template Panel'
+#    empty: GLASS_PANE
+#    item:
+#      '12':
+#        material: COBBLESTONE
+#        stack: 1
+#        name: '&fClick Me!'
+#        commands:
+#        - msg= You clicked the item!
+#        - cpc
+####################################################################
+panels:
+  adminPanel:
+    perm: default
+    rows: 5
+    title: '&6&lAdmin Panel'
+    commands:
+    - mod
+    empty: 'Black_Stained_glass_pane'
+    sendMessage:
+    - commandpanels:commandpanelclose
+    - console= title %cp-player-name% times 20 60 20
+    - console= title %cp-player-name% subtitle {"text":"Has recieved their punishment","color":"green"}
+    - console= title %cp-player-name% title {"text":"%cp-player-input%"}
+    item:
+      '22':
+        material: COMPASS
+        name: '&bBan'
+        commands:
+        - 'console= ban %cp-player-input%'
+        - 'sequence= sendMessage'
+      '20':
+        material: BOOK
+        name: '&4Kick'
+        commands:
+        - 'console= kick %cp-player-input%'
+        - 'sequence= sendMessage'
+      '24':
+        material: orange_dye
+        name: '&6Warn'
+        commands:
+        - 'console= warn %cp-player-input%'
+        - 'sequence= sendMessage'

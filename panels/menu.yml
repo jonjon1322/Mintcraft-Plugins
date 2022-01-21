@@ -1,0 +1,48 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Template File
+# |                            By RockyHawk v1.1
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+panels:
+  Menu:
+    rows: 4
+    commands:
+    - menu
+    title: '&9MENU'
+    empty: GRAY_STAINED_GLASS_PANE
+    commands-on-open:
+    - 'open= Warps {Middle}'
+
+    item:
+      '31':
+        material: BARRIER
+        stack: 1
+        name: '&7Close'
+        commands:
+        - cpc
+      '27':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWRmYzkzZGE0MGNmM2ZjNDA1OTRjNWFmNDlmOGYyNWYwNzQxMzNmM2ZmMjZmODMxMTI3MWFkNGRhMTJkN2I4ZiJ9fX0=
+        stack: 1
+        name: '&5Money!'
+        lore:
+        - '%vault_eco_balance_commas%'
+      '11':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWYyMmI2YTNhMGYyNGJkZWVhYjJhNmFjZDliMWY1MmJiOTU5NGQ1ZjZiMWUyYzA1ZGRkYjIxOTQxMGM4In19fQ==
+        stack: 1
+        name: '&6Crates!'
+        commands:
+        - 'tp %cp-player-name% 108.00 70.00 -520.62'
+      '13':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM4Y2YzZjhlNTRhZmMzYjNmOTFkMjBhNDlmMzI0ZGNhMTQ4NjAwN2ZlNTQ1Mzk5MDU1NTI0YzE3OTQxZjRkYyJ9fX0=
+        stack: 1
+        name: '&6SMP!'
+        commands:
+        - mvtp World
+      '15':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWYyMmI2YTNhMGYyNGJkZWVhYjJhNmFjZDliMWY1MmJiOTU5NGQ1ZjZiMWUyYzA1ZGRkYjIxOTQxMGM4In19fQ==
+        stack: 1
+        name: '&6spawn!'
+        commands:
+        - mvtp spawn
+
+

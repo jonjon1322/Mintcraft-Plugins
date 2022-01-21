@@ -1,0 +1,54 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Template File
+# |                            By RockyHawk v1.1
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |------------------------------------------------------------------------
+#panels:
+#  template:
+#    perm: admin
+#    rows: 4
+#    title: '&8Template Panel'
+#    empty: GLASS_PANE
+#    item:
+#      '12':
+#        material: COBBLESTONE
+#        stack: 1
+#        name: '&fClick Me!'
+#        commands:
+#        - msg= You clicked the item!
+#        - cpc
+####################################################################
+
+panels:
+  charonseyes:
+    perm: Charonseyes
+    rows: HOPPER
+    title: '&9Charonseyes Warps'
+    commands:
+    - ch
+    empty: BLUE_STAINED_GLASS_PANE
+    item:
+      '0':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM4Y2YzZjhlNTRhZmMzYjNmOTFkMjBhNDlmMzI0ZGNhMTQ4NjAwN2ZlNTQ1Mzk5MDU1NTI0YzE3OTQxZjRkYyJ9fX0=
+        stack: 1
+        name: '&6Overworld'
+        commands:
+        - mvtp charonseyes
+      '1':
+        material: RED_WOOL
+        stack: 1
+        name: '&7Nether'
+        commands:
+        - mvtp charons
+      '3':
+        material: BLACK_WOOL
+        stack: 1
+        name: '&7End'
+        commands:
+        - mvtp eyes
+      '2':
+        material: BARRIER
+        stack: 1
+        name: '&6Close'
+        commands:
+        - cpc
